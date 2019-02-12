@@ -1,0 +1,38 @@
+<h2>Developers</h2>
+<!--
+<div>
+  <label>Developer ID:
+    <input #developerId />
+  </label><br>-->
+  <!-- (click) passes input value to add() and then clears the input -->
+ <!-- <label>Developer:
+      <input #developerName />
+    </label><br>
+    <label>Known Technologies:
+        <input #heroName />
+      </label>
+  <button (click)="add(DeveloperName.value); DeveloperName.value=''">
+
+    add
+  </button>
+</div>-->
+<div class="main">
+  <div class="dev">
+<ul class="developers">
+    <li *ngFor="let developer of developers">
+     
+        <span class="badge">{{developer.id}}</span> {{developer.name}}
+     
+      <button class="delete" title="delete developer"
+        (click)="delete(developer)">x</button>
+    </li>
+  
+  </ul>
+</div>
+<!--<form [formGroup]="addUser" ngSubmit="add()">
+  <label>ID:</label>
+  <input type="text" formControlName="devid">-->
+  <input type="text" [formControl]="devname">
+  <button (click)="add()">Add {{devname.value}}</button>
+<!--</form>-->
+</div>

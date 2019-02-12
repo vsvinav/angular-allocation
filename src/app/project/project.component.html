@@ -1,0 +1,10 @@
+<h2>Projects</h2>
+<ul class="project">
+  <li *ngFor="let project of projects">
+   
+      <span class="badge">{{project.id}}</span> {{project.name}}
+   
+    <button class="delete" title="delete developer"
+      (click)="delete(developer)">x</button>
+  </li>
+</ul>
